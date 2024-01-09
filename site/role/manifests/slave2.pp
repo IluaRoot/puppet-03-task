@@ -5,5 +5,8 @@ class role::slave2 {
       sourcefile => '/vagrant/conf.f/dynamic.conf',
    }
    include profile::make_dir
-
+   class { 'profile::site_copy':
+       sitedst => '/var/www/site/index.php',
+       sitesrc => '/vagrant/index.php',
+   }
 }
