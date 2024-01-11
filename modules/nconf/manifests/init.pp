@@ -1,10 +1,9 @@
 class nconf {
-     file { 'delete default':
-     path => '/etc/nginx/nginx.conf',
+     file { '/etc/nginx/nginx.conf':
      ensure => absent,
    }
-     file { '/etc/nginx/nginx.conf':
-     path => '',
+     file { 'Copy Default Conf':
+     path => '/etc/nginx/nginx.conf',
      ensure => file,
      source => 'puppet:///modules/nconf/nginx',
    }  
