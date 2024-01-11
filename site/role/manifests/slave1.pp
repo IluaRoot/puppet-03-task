@@ -6,6 +6,6 @@ class role::slave1 {
        sitedst => '/var/www/site/index.html',
        sitesrc => '/vagrant/index.html',
    }
-   include nconf
+   #include nconf
    include profile::nginx_restart
 }
