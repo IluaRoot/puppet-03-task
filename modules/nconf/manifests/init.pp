@@ -4,5 +4,9 @@ class nconf {
      ensure => file,
      source => 'puppet:///modules/nconf/nginx',
    }  
-   include profile::nginx_restart
+   service { 'nginx':
+     ensure => running,
+     enable => true,
+     require => file['Copy Default Conf'],
+   }
 }
