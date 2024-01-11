@@ -1,5 +1,6 @@
 class nconf {
-     file { '/etc/nginx/nginx.conf':
+     file { 'delete default':
+     path => '/etc/nginx/nginx.conf',
      ensure => absent,
    }
    file { '/etc/nginx/nginx.conf':
