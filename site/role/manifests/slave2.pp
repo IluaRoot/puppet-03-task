@@ -9,6 +9,6 @@ class role::slave2 {
        sitedst => '/var/www/site/index.php',
        sitesrc => '/vagrant/index.php',
    }
-   include profile::disable_default
+   #include nconf
    include profile::nginx_restart
 }
