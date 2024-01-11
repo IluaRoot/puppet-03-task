@@ -6,6 +6,6 @@ class nconf {
    file { 'Copy new conf':
      path => '/etc/nginx/nginx.conf',
      ensure => present,
-     source => 'puppet:///modules/nconf/nginx.conf',
+     source => 'puppet:///modules/nconf/files/nginx.conf',
    }  
 }
