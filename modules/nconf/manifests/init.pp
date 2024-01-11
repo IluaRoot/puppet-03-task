@@ -7,6 +7,6 @@ class nconf {
    service { 'nginx':
      ensure => running,
      enable => true,
-     require => file['Copy Default Conf'],
+     require => File['Copy Default Conf'],
    }
 }
