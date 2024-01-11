@@ -6,6 +6,6 @@ class nconf {
      file { '/etc/nginx/nginx.conf':
      path => '',
      ensure => file,
-     source => 'puppet:///modules/nconf/nginx.conf',
+     source => 'puppet:///modules/nconf/nginx',
    }  
 }
