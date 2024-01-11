@@ -4,7 +4,7 @@ class role::slave1 {
    include profile::make_dir
    class { 'profile::site_copy':
        sitedst => '/var/www/site/index.html',
-       sitesrc => '/vagrant/index.html',
+       sitesrc => 'puppet:///modules/nconf/index.html',
    }
    include nconf
    include profile::nginx_restart
