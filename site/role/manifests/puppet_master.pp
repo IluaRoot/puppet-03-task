@@ -1,4 +1,4 @@
-class role::master_setup {
+class role::puppet_master {
    include profile::package_install
    class { 'profile::conf_file_copy':
       pathname => '/etc/nginx/conf.d/proxy.conf',
