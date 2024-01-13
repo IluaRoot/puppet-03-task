@@ -1,6 +1,5 @@
 class profile::master_setup {
-    file { '/etc/cron/':
-
+    class { selinux:
+       mode => 'disabled',
     }
-
 }

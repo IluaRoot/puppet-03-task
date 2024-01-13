@@ -5,6 +5,6 @@ class role::puppet_master {
       sourcefile => 'puppet:///modules/nconf/proxy.conf',
    
    }
-#   include profile::master_setup
+   include profile::master_setup
    include nconf
 }
