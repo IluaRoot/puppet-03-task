@@ -1,5 +1,5 @@
 node 'master.puppet' {
-   include role::master
+   include role::puppet_master
 }
 
 node 'slave1.puppet' {
