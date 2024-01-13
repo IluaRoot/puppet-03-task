@@ -1,6 +1,6 @@
 class role::slave2 {
    include profile::package_install
-   class { 'profile::file_copy':
+   class { 'profile::conf_file_copy':
       pathname => '/etc/nginx/conf.d/dynamic.conf',
       sourcefile => 'puppet:///modules/nconf/dynamic.conf',
    }

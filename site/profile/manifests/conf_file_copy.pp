@@ -1,4 +1,4 @@
-class profile::file_copy (
+class profile::conf_file_copy (
     String $pathname,
     String $sourcefile,
 ) {
