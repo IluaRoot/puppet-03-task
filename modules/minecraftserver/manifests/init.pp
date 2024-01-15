@@ -26,6 +26,5 @@ class minecraftserver {
        File['/opt/minecraft'],
        Remote_file['Download minecraft server'],
        ]
-
    }
 }
