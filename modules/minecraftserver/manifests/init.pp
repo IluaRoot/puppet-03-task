@@ -39,4 +39,9 @@ class minecraftserver {
       line   => "eula=true",
       match  => 'eula=false',
    }
+
+   service { 'restart minecraft server':
+      name   => 'minecraftserver',
+      ensure => running,
+   }
 }
