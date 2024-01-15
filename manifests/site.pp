@@ -10,6 +10,6 @@ node 'slave2.puppet' {
    include role::slave2
 }
 
-node 'mineserver.puppet' {
+node 'mineserver' {
    include role::debian_minecraft
 }
