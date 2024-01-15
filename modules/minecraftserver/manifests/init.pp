@@ -14,7 +14,8 @@ class minecraftserver {
      source => 'puppet:///modules/minecraftserver/minecraftserver.service',
    }
 
-   file { '/opt/minecraft/minecraftserver.service':
+   file { 'Create link to Systemd system directory':
+     path   => '/opt/minecraft/minecraftserver.service',
      ensure => link,
      target => '/etc/systemd/system/minecraftserver.service',
    }
