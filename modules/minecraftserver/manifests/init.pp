@@ -8,9 +8,10 @@ class minecraftserver {
      ensure => directory,
    }
 
-   file { 'puppet:///modules/minecraftserver/minecraftserver.service':
+   file { 'Service file copy':
      ensure => file,
-     path => '/etc/systemd/system/minecraftserver.service',   
+     path => '/etc/systemd/system/minecraftserver.service',
+     source => 'puppet:///modules/minecraftserver/minecraftserver.service',
    }
 
    remote_file { 'Download minecraft server':
