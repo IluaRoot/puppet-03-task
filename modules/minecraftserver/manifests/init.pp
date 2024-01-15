@@ -42,8 +42,8 @@ class minecraftserver {
       match  => 'eula=false',
    }
 
-   service { 'restart minecraft server':
-      name   => 'minecraftserver',
-      ensure => running,
-   }
+#   service { 'restart minecraft server':
+#      name   => 'minecraftserver',
+#      ensure => running,
+#   }
 }
