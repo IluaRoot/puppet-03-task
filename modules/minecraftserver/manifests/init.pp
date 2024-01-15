@@ -15,7 +15,8 @@ class minecraftserver {
    }
 
    file { '/opt/minecraft/minecraftserver.service':
-     ensure => '/etc/systemd/system/minecraftserver.service',
+     ensure => link,
+     target => '/etc/systemd/system/minecraftserver.service',
    }
 
    remote_file { 'Download minecraft server':
