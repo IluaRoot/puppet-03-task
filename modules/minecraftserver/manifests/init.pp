@@ -10,15 +10,15 @@ class minecraftserver {
 
    file { 'Service file copy':
      ensure => file,
-     path   => '/opt/minecraft/minecraftserver.service',
+     path   => '/etc/systemd/system/minecraftserver.service',
      source => 'puppet:///modules/minecraftserver/minecraftserver.service',
    }
 
-   file { 'Create link to Systemd system directory':
-     path   => '/opt/minecraft/minecraftserver.service',
-     ensure => link,
-     target => '/etc/systemd/system/minecraftserver.service',
-   }
+ #  file { 'Create link to Systemd system directory':
+ #    path   => '/opt/minecraft/minecraftserver.service',
+ #    ensure => link,
+ #    target => '/etc/systemd/system/minecraftserver.service',
+ #  }
 
    remote_file { 'Download minecraft server':
      ensure => present,
