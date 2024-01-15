@@ -14,12 +14,6 @@ class minecraftserver {
      source => 'puppet:///modules/minecraftserver/minecraftserver.service',
    }
 
- #  file { 'Create link to Systemd system directory':
- #    path   => '/opt/minecraft/minecraftserver.service',
- #    ensure => link,
- #    target => '/etc/systemd/system/minecraftserver.service',
- #  }
-
    remote_file { 'Download minecraft server':
      ensure => present,
      path   => '/opt/minecraft/minecraft_server.1.20.4.jar',
@@ -41,9 +35,4 @@ class minecraftserver {
       line   => "eula=true",
       match  => 'eula=false',
    }
-
-#   service { 'restart minecraft server':
-#      name   => 'minecraftserver',
-#      ensure => running,
-#   }
 }
